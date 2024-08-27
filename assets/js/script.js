@@ -1,16 +1,24 @@
 (function ($) {
 	"use strict";
 
+	
 	// Theme color control js
 	$(document).ready(function () {
+		// Ambil preferensi mode gelap dari penyimpanan lokal
 		const isDarkMode = localStorage.getItem('darkMode') === 'true';
+		
+		// Terapkan kelas mode gelap jika preferensi menyatakan mode gelap aktif
 		$('body').toggleClass('dark-theme', isDarkMode);
-
+		
+		// Tampilkan konten halaman
 		$('#page-content').fadeIn(0);
-
+	
+		// Tambahkan event handler untuk tombol pengendali tema
 		$('.theme-control-btn').on("click", function () {
+			// Toggle kelas mode gelap pada elemen body
 			$('body').toggleClass('dark-theme');
-
+			
+			// Simpan status mode gelap di penyimpanan lokal
 			const isDark = $('body').hasClass('dark-theme');
 			localStorage.setItem('darkMode', isDark);
 		});
