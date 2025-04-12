@@ -19,9 +19,30 @@
   <link rel="stylesheet" href="assets/css/magnific-popup.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <style>
+    .page-transition {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    }
+
+    .page-transition.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="page-transition"></div>
   <div id="page-content">
     <!-- header part start -->
     <header class="header-area">
@@ -35,7 +56,7 @@
                     d="M0 1.5C0 1.10218 0.158035 0.720644 0.43934 0.43934C0.720644 0.158035 1.10218 0 1.5 0L9 0C9.39782 0 9.77936 0.158035 10.0607 0.43934C10.342 0.720644 10.5 1.10218 10.5 1.5V22.5C10.5 22.8978 10.342 23.2794 10.0607 23.5607C9.77936 23.842 9.39782 24 9 24H1.5C1.10218 24 0.720644 23.842 0.43934 23.5607C0.158035 23.2794 0 22.8978 0 22.5V1.5ZM13.5 1.5C13.5 1.10218 13.658 0.720644 13.9393 0.43934C14.2206 0.158035 14.6022 0 15 0L22.5 0C22.8978 0 23.2794 0.158035 23.5607 0.43934C23.842 0.720644 24 1.10218 24 1.5V9C24 9.39782 23.842 9.77936 23.5607 10.0607C23.2794 10.342 22.8978 10.5 22.5 10.5H15C14.6022 10.5 14.2206 10.342 13.9393 10.0607C13.658 9.77936 13.5 9.39782 13.5 9V1.5ZM13.5 15C13.5 14.6022 13.658 14.2206 13.9393 13.9393C14.2206 13.658 14.6022 13.5 15 13.5H22.5C22.8978 13.5 23.2794 13.658 23.5607 13.9393C23.842 14.2206 24 14.6022 24 15V22.5C24 22.8978 23.842 23.2794 23.5607 23.5607C23.2794 23.842 22.8978 24 22.5 24H15C14.6022 24 14.2206 23.842 13.9393 23.5607C13.658 23.2794 13.5 22.8978 13.5 22.5V15Z"
                     class="logo-icon" />
                 </svg> -->
-                <span>O.O | Boy<span class="primary">Dapit</span></span>
+                <span class="text-white">Boy</span><span class="primary">Devit</span>
               </a>
             </div>
             <div class="navbar-main d-flex flex-grow-1">
@@ -46,7 +67,7 @@
                       d="M0 1.5C0 1.10218 0.158035 0.720644 0.43934 0.43934C0.720644 0.158035 1.10218 0 1.5 0L9 0C9.39782 0 9.77936 0.158035 10.0607 0.43934C10.342 0.720644 10.5 1.10218 10.5 1.5V22.5C10.5 22.8978 10.342 23.2794 10.0607 23.5607C9.77936 23.842 9.39782 24 9 24H1.5C1.10218 24 0.720644 23.842 0.43934 23.5607C0.158035 23.2794 0 22.8978 0 22.5V1.5ZM13.5 1.5C13.5 1.10218 13.658 0.720644 13.9393 0.43934C14.2206 0.158035 14.6022 0 15 0L22.5 0C22.8978 0 23.2794 0.158035 23.5607 0.43934C23.842 0.720644 24 1.10218 24 1.5V9C24 9.39782 23.842 9.77936 23.5607 10.0607C23.2794 10.342 22.8978 10.5 22.5 10.5H15C14.6022 10.5 14.2206 10.342 13.9393 10.0607C13.658 9.77936 13.5 9.39782 13.5 9V1.5ZM13.5 15C13.5 14.6022 13.658 14.2206 13.9393 13.9393C14.2206 13.658 14.6022 13.5 15 13.5H22.5C22.8978 13.5 23.2794 13.658 23.5607 13.9393C23.842 14.2206 24 14.6022 24 15V22.5C24 22.8978 23.842 23.2794 23.5607 23.5607C23.2794 23.842 22.8978 24 22.5 24H15C14.6022 24 14.2206 23.842 13.9393 23.5607C13.658 23.2794 13.5 22.8978 13.5 22.5V15Z"
                       class="logo-icon" />
                   </svg> -->
-                  <span>O.O | Wahyu<span class="primary">Satrio</span></span>
+                  <span class="text-white">Boy</span><span class="primary">Devit</span>
                 </a>
               </div>
               <ul class="navbar-info mx-auto">
@@ -163,7 +184,7 @@
                         d="M20.9999 11C21.2547 11.0003 21.4999 11.0979 21.6852 11.2728C21.8706 11.4478 21.9821 11.687 21.997 11.9414C22.012 12.1958 21.9292 12.4464 21.7656 12.6418C21.602 12.8373 21.37 12.9629 21.1169 12.993L20.9999 13H19.9999C19.745 12.9997 19.4998 12.9021 19.3145 12.7272C19.1292 12.5522 19.0176 12.313 19.0027 12.0586C18.9878 11.8042 19.0705 11.5536 19.2341 11.3582C19.3977 11.1627 19.6298 11.0371 19.8829 11.007L19.9999 11H20.9999Z"
                         fill="#FD7E41" />
                       <path
-                        d="M6.21264 4.80985L6.30664 4.89285L7.00664 5.59285C7.18599 5.77281 7.29011 6.01429 7.29787 6.26824C7.30562 6.52219 7.21642 6.76957 7.04839 6.96013C6.88036 7.1507 6.64609 7.27016 6.39316 7.29425C6.14024 7.31834 5.88763 7.24526 5.68664 7.08985L5.59264 7.00685L4.89264 6.30685C4.72073 6.13453 4.61757 5.90543 4.6025 5.66248C4.58744 5.41954 4.6615 5.17945 4.8108 4.98721C4.9601 4.79497 5.1744 4.66378 5.41351 4.61824C5.65262 4.57271 5.90013 4.61594 6.10964 4.73985L6.21264 4.80985Z"
+                        d="M6.21264 4.80985L6.30664 4.89285L7.00664 5.59285C7.18599 5.77281 7.29011 6.01429 7.29787 6.26824C7.30562 6.52219 7.23972 6.76957 7.04839 6.96013C6.88036 7.1507 6.64609 7.27016 6.39316 7.29425C6.14024 7.31834 5.88763 7.24526 5.68664 7.08985L5.59264 7.00685C4.72073 6.13453 4.61757 5.90543 4.6025 5.66248C4.58744 5.41954 4.6615 5.17945 4.8108 4.98721C4.9601 4.79497 5.1744 4.66378 5.41351 4.61824C5.65262 4.57271 5.90013 4.61594 6.10964 4.73985L6.21264 4.80985Z"
                         fill="#FD7E41" />
                       <path
                         d="M19.1071 4.89288C19.2793 5.06508 19.3827 5.29418 19.398 5.5372C19.4132 5.78023 19.3393 6.02048 19.1901 6.21288L19.1071 6.30688L18.4071 7.00688C18.2271 7.18623 17.9856 7.29036 17.7317 7.29811C17.4777 7.30587 17.2304 7.21667 17.0398 7.04864C16.8492 6.8806 16.7298 6.64633 16.7057 6.39341C16.6816 6.14049 16.7547 5.88788 16.9101 5.68688L16.9931 5.59288L17.6931 4.89288C17.8806 4.70541 18.1349 4.6001 18.4001 4.6001C18.6652 4.6001 18.9196 4.70541 19.1071 4.89288Z"
@@ -178,7 +199,7 @@
                     <small class="theme-text d-block d-xl-none">Change appearance</small>
                   </span>
                 </button>
-                <a href="contact.html" class="lets-talk-btn">
+                <a href="https://wa.me/6288225699119" class="lets-talk-btn">
                   Let's Talk
                   <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -215,13 +236,13 @@
                     <img src="assets/img/images/PP.jpg" alt="profile">
                   </div>
                   <div class="text">
-                    <h3 class="card-title">Boy Dapit 👋</h3>
+                    <h3 class="card-title">Boy Devit 👋</h3>
                     <p>A Passionate <span>Graphics & Motion Designer</span> 🖥️ with
                       <span>2
                         years</span> of Experiences over 50+
                       clients Worldwide.</p>
                     <div class="common-button-groups">
-                      <a class="btn btn-call" href="https://wa.me/+6282211496316">
+                      <a class="btn btn-call" href="https://wa.me/6288225699119">
                         <svg class="icon" width="25" height="24" viewBox="0 0 25 24" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <path
@@ -235,7 +256,7 @@
                         </svg>
                         Contact Me
                       </a>
-                      <button class="btn btn-copy" data-clipboard-text="halo.iniwahyu@gmail.com">
+                      <button class="btn btn-copy" data-clipboard-text="boydavit12@gmail.com">
                         <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <path
@@ -250,9 +271,8 @@
                     </div>
                     <div class="social-media-icon">
                       <ul class="list-unstyled">
-                        <li><a href="https://instagram.com/wahyusatrio.o"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="https://github.com/wahyu4754"><i class="fab fa-github"></i></a></li>
-                        <li><a href="https://behance.net/wahyusatrio"><i class="fab fa-behance"></i></a></li>
+                        <li><a href="https://www.instagram.com/bydvt_/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.behance.net/boydavit?fbclid=PAZXh0bgNhZW0CMTEAAacYQIxGlPad6oqeBEw74fxESCTSijPjrzQHaAHrXSB-ww7fTJacgh32AIA2bA_aem_3zwdsh6YOuDXveOEQ4r8cg"><i class="fab fa-behance"></i></a></li>
                       </ul>
                     </div>
                   </div>
@@ -316,11 +336,11 @@
                           </div>
                           <div class="text">
                             <div class="info">
-                              <a href="https://behance.net/wahyusatrio" class="title">ISSA Skintherapy Collection</a>
+                              <a href="https://www.behance.net/boydavit?fbclid=PAZXh0bgNhZW0CMTEAAacYQIxGlPad6oqeBEw74fxESCTSijPjrzQHaAHrXSB-ww7fTJacgh32AIA2bA_aem_3zwdsh6YOuDXveOEQ4r8cg" class="title">ISSA Skintherapy Collection</a>
                               <p class="subtitle">3D Product Animation</p>
                             </div>
                             <div class="visite-btn">
-                              <a href="https://behance.net/wahyusatrio">Visit Site
+                              <a href="https://www.behance.net/boydavit?fbclid=PAZXh0bgNhZW0CMTEAAacYQIxGlPad6oqeBEw74fxESCTSijPjrzQHaAHrXSB-ww7fTJacgh32AIA2bA_aem_3zwdsh6YOuDXveOEQ4r8cg">Visit Site
                                 <svg class="arrow-up" width="14" height="15" viewBox="0 0 14 15" fill="none"
                                   xmlns="http://www.w3.org/2000/svg">
                                   <path d="M9.91634 4.5835L4.08301 10.4168" stroke-linecap="round"
@@ -347,11 +367,11 @@
                           </div>
                           <div class="text">
                             <div class="info">
-                              <a href="https://behance.net/wahyusatrio" class="title">Wardah Case Study (Cooming Soon)</a>
+                              <a href="https://www.behance.net/boydavit?fbclid=PAZXh0bgNhZW0CMTEAAacYQIxGlPad6oqeBEw74fxESCTSijPjrzQHaAHrXSB-ww7fTJacgh32AIA2bA_aem_3zwdsh6YOuDXveOEQ4r8cg" class="title">Wardah Case Study (Cooming Soon)</a>
                               <p class="subtitle">Motion Graphic</p>
                             </div>
                             <div class="visite-btn">
-                              <a href="https://behance.net/wahyusatrio">Visit Site
+                              <a href="https://www.behance.net/boydavit?fbclid=PAZXh0bgNhZW0CMTEAAacYQIxGlPad6oqeBEw74fxESCTSijPjrzQHaAHrXSB-ww7fTJacgh32AIA2bA_aem_3zwdsh6YOuDXveOEQ4r8cg">Visit Site
                                 <svg class="arrow-up" width="14" height="15" viewBox="0 0 14 15" fill="none"
                                   xmlns="http://www.w3.org/2000/svg">
                                   <path d="M9.91634 4.5835L4.08301 10.4168" stroke-linecap="round"
@@ -410,12 +430,12 @@
                   <div  class="work-together-slider">
                     <div class="slider-main d-flex gap-4 align-items-center">
                       <div class="slider-item">
-                        <a href="https://behance.net/wahyusatrio">Visit my Behance 👋</a>
-                        <a href="https://behance.net/wahyusatrio">Visit my Behance 👋</a>
+                        <a href="https://www.behance.net/boydavit?fbclid=PAZXh0bgNhZW0CMTEAAacYQIxGlPad6oqeBEw74fxESCTSijPjrzQHaAHrXSB-ww7fTJacgh32AIA2bA_aem_3zwdsh6YOuDXveOEQ4r8cg">Visit my Behance 👋</a>
+                        <a href="https://www.behance.net/boydavit?fbclid=PAZXh0bgNhZW0CMTEAAacYQIxGlPad6oqeBEw74fxESCTSijPjrzQHaAHrXSB-ww7fTJacgh32AIA2bA_aem_3zwdsh6YOuDXveOEQ4r8cg">Visit my Behance 👋</a>
                       </div>
                       <div class="slider-item">
-                        <a href="https://behance.net/wahyusatrio">Visit my Behance 👋</a>
-                        <a href="https://behance.net/wahyusatrio">Visit my Behance 👋</a>
+                        <a href="https://www.behance.net/boydavit?fbclid=PAZXh0bgNhZW0CMTEAAacYQIxGlPad6oqeBEw74fxESCTSijPjrzQHaAHrXSB-ww7fTJacgh32AIA2bA_aem_3zwdsh6YOuDXveOEQ4r8cg">Visit my Behance 👋</a>
+                        <a href="https://www.behance.net/boydavit?fbclid=PAZXh0bgNhZW0CMTEAAacYQIxGlPad6oqeBEw74fxESCTSijPjrzQHaAHrXSB-ww7fTJacgh32AIA2bA_aem_3zwdsh6YOuDXveOEQ4r8cg">Visit my Behance 👋</a>
                       </div>
                     </div>
                   </div>
@@ -449,7 +469,7 @@
     <footer class="footer-area">
       <div class="container">
         <div class="text text-center">
-          <p>© Boy Dapit - 2024</p>
+          <p>© Boy Devit - 2024</p>
         </div>
       </div>
     </footer>
@@ -463,6 +483,52 @@
   <script src="assets/js/ajax-form.js"></script>
   <script src="assets/js/clipboard.min.js"></script>
   <script src="assets/js/slick.min.js"></script>
+  <script>
+    // Error handling untuk script
+    window.onerror = function(msg, url, lineNo, columnNo, error) {
+      console.error('Error: ' + msg + '\nURL: ' + url + '\nLine: ' + lineNo + '\nColumn: ' + columnNo + '\nError object: ' + JSON.stringify(error));
+      return false;
+    };
+
+    // Pastikan jQuery sudah dimuat
+    if (typeof jQuery == 'undefined') {
+      console.error('jQuery tidak dimuat!');
+    }
+
+    // Pastikan Bootstrap sudah dimuat
+    if (typeof bootstrap == 'undefined') {
+      console.error('Bootstrap tidak dimuat!');
+    }
+
+    // Inisialisasi komponen setelah DOM siap
+    document.addEventListener('DOMContentLoaded', function() {
+      // Inisialisasi Magnific Popup
+      if (typeof $.magnificPopup !== 'undefined') {
+        $('.gallery-popup').magnificPopup({
+          type: 'image',
+          gallery: {
+            enabled: true
+          }
+        });
+      }
+
+      // Inisialisasi Clipboard
+      if (typeof ClipboardJS !== 'undefined') {
+        new ClipboardJS('.btn-copy');
+      }
+
+      // Inisialisasi Slick Slider
+      if (typeof $.fn.slick !== 'undefined') {
+        $('.work-together-slider .slider-main').slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000
+        });
+      }
+    });
+  </script>
   <script src="assets/js/script.js"></script>
 </body>
 
